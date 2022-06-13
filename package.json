@@ -1,0 +1,72 @@
+{
+  "name": "webextension-userscript-rollup-template",
+  "version": "0.0.1",
+  "description": "Rollup Boilerplate for developing Userscripts and WebExtensions",
+  "license": "MIT",
+  "author": {
+    "name": "Tad Wohlrapp",
+    "url": "https://github.com/tadwohlrapp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tadwohlrapp/webextension-userscript-rollup-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tadwohlrapp/webextension-userscript-rollup-template/issues"
+  },
+  "homepage": "https://github.com/tadwohlrapp/webextension-userscript-rollup-template",
+  "private": true,
+  "keywords": [
+    "web-extension",
+    "userscript",
+    "extension",
+    "chrome",
+    "firefox",
+    "rollup",
+    "javascript"
+  ],
+  "scripts": {
+    "dev": "npm run clear && node -r esm tools/server.js",
+    "build": "npm run clear && cross-env NODE_ENV=production rollup -c",
+    "clear": "rimraf dist releases",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix"
+  },
+  "dependencies": {
+    "@types/firefox-webext-browser": "^94.0.1",
+    "colorette": "^2.0.16",
+    "fs-extra": "^10.1.0",
+    "rollup": "^2.75.6",
+    "rollup-plugin-userscript-metablock": "^0.3.1",
+    "serve-handler": "^6.1.3"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-replace": "^4.0.0",
+    "autoprefixer": "^10.4.7",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.17.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "esm": "^3.2.25",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "rollup-plugin-chrome-extension": "^3.6.10",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-styles": "^4.0.0",
+    "rollup-plugin-zip": "^1.0.3",
+    "sass": "^1.52.3"
+  },
+  "config": {
+    "directories": {
+      "development": "dist",
+      "production": "releases"
+    },
+    "branchName": "main",
+    "port": "8124"
+  }
+}

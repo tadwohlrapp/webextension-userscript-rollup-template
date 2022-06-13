@@ -1,0 +1,11 @@
+{
+  "appName": {
+    "message": "Tad's Rollup Boilerplate"
+  },
+  "appDesc": {
+    "message": "Entwickle Userscripts und WebExtensions"
+  },
+  "sampleString": {
+    "message": "Dies ist Deutsch"
+  }
+}

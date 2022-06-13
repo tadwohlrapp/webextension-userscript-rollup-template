@@ -1,0 +1,6 @@
+dist/
+node_modules/
+releases/
+src/_locales/generatedMessages.json
+.DS_Store
+._*

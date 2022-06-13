@@ -1,0 +1,9 @@
+$some-color: #333;
+
+h2 {
+  color: $some-color;
+
+  &::before {
+    content: '✅ ';
+  }
+}
