@@ -1,6 +1,5 @@
 dist/
 node_modules/
-releases/
-src/_locales/generatedMessages.json
+releases/extension/
 .DS_Store
 ._*

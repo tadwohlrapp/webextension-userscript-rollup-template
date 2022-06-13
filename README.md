@@ -1,5 +1,7 @@
 # Tad's userscript and web extension boilerplate
 
+**_This template is to be considered work in progress and not production ready!_**
+
 ## Development (with automatic reloading)
 
 ```sh
@@ -18,24 +20,21 @@ The `server.user.js` userscript is a wrapper which pulls the latest version of y
 
 Open the [Extensions Dashboard](chrome://extensions), make sure "Developer mode" is switched on, click "Load unpacked", and choose the `dist/extension` folder.
 
----
-
 ## Build for Production
 
 ```sh
 npm run build
 ```
 
-This will create a ZIP file with your package name and version in the `releases` folder. It also bundles your userscript without sourcemapping to `releases/script.user.js`
-
----
+This will create a ZIP file with your package name and version in the `releases/extension` folder. It also bundles your userscript without sourcemapping to `releases/script.user.js`
 
 ## Usage
 
-To change the output folders for development and production, edit `"directories"` in `package.json`.
+TBD
 
 ## Thanks
 
 This Template is based on:
-https://github.com/extend-chrome/javascript-boilerplate
-https://github.com/cvzi/rollup-userscript-template
+
+- https://github.com/extend-chrome/javascript-boilerplate
+- https://github.com/cvzi/rollup-userscript-template

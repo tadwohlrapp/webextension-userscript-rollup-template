@@ -1,6 +1,6 @@
+import translations from 'translations'; // eslint-disable-line import/no-unresolved
 import './scss/style.scss';
 import headline from './getHeadline';
-import * as messages from './_locales/generatedMessages.json';
 
 const newHeadline = document.createElement('h2');
 
@@ -12,6 +12,6 @@ headline.insertAdjacentElement('afterend', newHeadline);
 
 const localeString = document.createElement('p');
 
-localeString.textContent = messages.sampleString.en;
+localeString.textContent = translations.sampleString.en;
 
 newHeadline.insertAdjacentElement('afterend', localeString);

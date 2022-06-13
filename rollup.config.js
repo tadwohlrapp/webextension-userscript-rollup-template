@@ -1,6 +1,7 @@
 import autoprefixer from 'autoprefixer';
 import json from '@rollup/plugin-json';
 import replace from '@rollup/plugin-replace';
+import virtual from '@rollup/plugin-virtual';
 import copy from 'rollup-plugin-copy';
 import del from 'rollup-plugin-delete';
 import metablock from 'rollup-plugin-userscript-metablock';
@@ -8,9 +9,9 @@ import zip from 'rollup-plugin-zip';
 import styles from 'rollup-plugin-styles';
 import { chromeExtension, simpleReloader } from 'rollup-plugin-chrome-extension';
 import pkg from './package.json';
-import { appName, appDesc } from './tools/getLocales';
+import { appName, appDesc, messages } from './tools/getLocales';
 
-const env = process.env.NODE_ENV ?? 'development';
+const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
 const isRelease = env === 'production';
 const { production: dirProd, development: dirDev } = pkg.config.directories;
 
@@ -79,6 +80,9 @@ const userscript = {
         { src: 'src/img/**/*', dest: `${isRelease ? dirProd : dirDev}/userscript/img` },
       ],
     }),
+    virtual({
+      translations: `export default ${JSON.stringify(messages)}`,
+    }),
     !isRelease && del({
       targets: `${dirDev}/userscript/img/*`,
       runOnce: true,
@@ -103,10 +107,13 @@ const extension = {
     styles(styleOptions),
     replace(replaceOptions('extension')),
     json(),
+    virtual({
+      translations: `export default ${JSON.stringify(messages)}`,
+    }),
     del({
       targets: `${dirDev}/extension/*`,
     }),
-    isRelease && zip({ dir: dirProd }),
+    isRelease && zip({ dir: `${dirProd}/extension` }),
   ],
 };
 

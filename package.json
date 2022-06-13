@@ -1,6 +1,6 @@
 {
   "name": "webextension-userscript-rollup-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Rollup Boilerplate for developing Userscripts and WebExtensions",
   "license": "MIT",
   "author": {
@@ -26,6 +26,7 @@
     "javascript"
   ],
   "scripts": {
+    "start": "npm run clear && rollup -c",
     "dev": "npm run clear && node -r esm tools/server.js",
     "build": "npm run clear && cross-env NODE_ENV=production rollup -c",
     "clear": "rimraf dist releases",
@@ -43,6 +44,7 @@
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-replace": "^4.0.0",
+    "@rollup/plugin-virtual": "^2.1.0",
     "autoprefixer": "^10.4.7",
     "cross-env": "^7.0.3",
     "eslint": "^8.17.0",

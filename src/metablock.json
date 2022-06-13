@@ -3,8 +3,8 @@
   "downloadURL": "https://example.com/script.user.js",
   "match": ["https://example.com/*"],
   "compatible": [
-    "firefox Tested on Firefox v90 with Violentmonkey v2.13.0, Tampermonkey v4.13 and Greasemonkey v4.11",
-    "chrome Tested on Chrome v94  with Violentmonkey v2.13.0 and Tampermonkey v4.13"
+    "firefox Tested on Firefox v101 with Violentmonkey v2.13.0, Tampermonkey v4.17.6161 and Greasemonkey v4.11",
+    "chrome Tested on Chrome v102 with Violentmonkey v2.13.0 and Tampermonkey v4.16.1"
   ],
   "grant": ["none"]
 }
