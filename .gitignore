@@ -1,5 +1,5 @@
 dist/
 node_modules/
-releases/extension/
+releases/extension*
 .DS_Store
 ._*
