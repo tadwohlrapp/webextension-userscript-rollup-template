@@ -15,7 +15,7 @@
     "no-console": "warn",
     "no-restricted-syntax": "off"
   },
-  "ignorePatterns": ["tools/*", "dist/*", "releases/*"],
+  "ignorePatterns": ["utils/*", "dist/*", "releases/*"],
   "globals": {
     "__type__": "readonly"
   }

@@ -27,7 +27,7 @@
   ],
   "scripts": {
     "start": "npm run clear && rollup -c",
-    "dev": "npm run clear && node -r esm tools/server.js",
+    "dev": "npm run clear && node -r esm utils/server.js",
     "build": "npm run clear && cross-env NODE_ENV=production rollup -c",
     "clear": "rimraf dist releases",
     "lint": "eslint src",

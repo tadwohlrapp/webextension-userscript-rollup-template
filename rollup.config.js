@@ -10,7 +10,7 @@ import styles from 'rollup-plugin-styles';
 import { chromeExtension, simpleReloader } from 'rollup-plugin-chrome-extension';
 import pkg from './package.json';
 import { matches } from './src/config';
-import { appName, appDesc, messages } from './tools/getLocales';
+import { appName, appDesc, messages } from './utils/getLocales';
 
 const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
 const isRelease = env === 'production';

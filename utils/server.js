@@ -32,7 +32,7 @@ server.listen(port, () => {
 // Create the userscript for development 'userscript/server.user.js'
 const devScriptOutFile = path.join(destDir, devScriptInFile);
 console.log(cyan(`generate development userscript ${bold('package.json')}, ${bold('metablock.json')}, ${bold(devScriptInFile)} → ${bold(devScriptOutFile)}...`));
-const devScriptContent = fs.readFileSync(`tools/${devScriptInFile}`, 'utf8').replace(/%PORT%/gm, port.toString());
+const devScriptContent = fs.readFileSync(`utils/${devScriptInFile}`, 'utf8').replace(/%PORT%/gm, port.toString());
 
 const grants = 'grant' in meta ? meta.grant.filter((el) => el !== 'none') : [];
 if (grants.indexOf('GM.xmlHttpRequest') === -1) {
