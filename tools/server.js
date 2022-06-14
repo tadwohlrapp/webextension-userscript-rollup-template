@@ -1,5 +1,6 @@
 import { red, green, cyan, bold } from 'colorette';
 import { appName, appDesc } from './getLocales';
+import { matches } from '../src/config';
 
 const path = require('path');
 const fs = require('fs-extra');
@@ -56,6 +57,7 @@ const override = {
   updateURL: `http://localhost:${port}/${devScriptInFile}`,
   downloadURL: `http://localhost:${port}/${devScriptInFile}`,
   icon: `http://localhost:${port}/img/icon-128.png`,
+  match: matches.userscript,
   grant: grants,
   connect: 'localhost',
 };
