@@ -1,6 +1,6 @@
 import translations from 'translations'; // eslint-disable-line import/no-unresolved
 import './scss/style.scss';
-import headline from './getHeadline';
+import headline from './js/getHeadline';
 
 const newHeadline = document.createElement('h2');
 
