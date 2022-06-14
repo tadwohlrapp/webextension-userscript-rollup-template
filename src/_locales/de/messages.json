@@ -6,6 +6,6 @@
     "message": "Entwickle Userscripts und WebExtensions"
   },
   "sampleString": {
-    "message": "Deutscher Beispiel-Text"
+    "message": "Deutscher Beispiel-Text generiert von ${type}."
   }
 }

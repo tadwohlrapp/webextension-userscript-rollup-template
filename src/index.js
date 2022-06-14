@@ -1,17 +1,30 @@
 import translations from 'translations'; // eslint-disable-line import/no-unresolved
 import './scss/style.scss';
+import tplobj from './utils/tplobj';
+
 import headline from './js/getHeadline';
 
+const container = document.createElement('section');
 const newHeadline = document.createElement('h2');
+const paragraph = document.createElement('p');
 
-if (__type__ === 'userscript') newHeadline.textContent = 'Userscript';
+const translationVariables = {
+  type: __type__,
+};
 
-if (__type__ === 'extension') newHeadline.textContent = 'WebExtension';
+const message = tplobj(translations, translationVariables);
 
-headline.insertAdjacentElement('afterend', newHeadline);
+newHeadline.textContent = __type__;
 
-const localeString = document.createElement('p');
+if (__type__ === 'userscript') {
+  paragraph.textContent = `${message.sampleString.en} Userscript works!`;
+}
 
-localeString.textContent = translations.sampleString.en;
+if (__type__ === 'extension') {
+  paragraph.textContent = `${message.sampleString.en} WebExtension works!`;
+}
 
-newHeadline.insertAdjacentElement('afterend', localeString);
+container.appendChild(newHeadline);
+container.appendChild(paragraph);
+
+headline.insertAdjacentElement('afterend', container);

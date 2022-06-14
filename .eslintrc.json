@@ -12,7 +12,8 @@
   },
   "rules": {
     "no-unused-vars": "warn",
-    "no-console": "warn"
+    "no-console": "warn",
+    "no-restricted-syntax": "off"
   },
   "ignorePatterns": ["tools/*", "dist/*", "releases/*"],
   "globals": {
