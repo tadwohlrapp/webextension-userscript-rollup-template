@@ -1,6 +1,6 @@
 {
   "name": "webextension-userscript-rollup-template",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Rollup Boilerplate for developing Userscripts and WebExtensions",
   "license": "MIT",
   "author": {
